@@ -1,58 +1,71 @@
-/* Set background image */
 body {
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-/* Center the content */
-.container {
+    background-color: #f9f3f3;
+    font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
-/* Text Styling */
+.container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
 h1 {
     font-size: 2.5rem;
+    color: #f44336;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+button {
+    background-color: #ffb6c1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #ff6f61;
     color: white;
 }
 
-.dear-aaru {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-/* Forgive Button */
-.forgive-button {
-    background-color: rgba(255, 0, 0, 0.8);
-    color: white !important; /* Force white text */
-    text-decoration: none;
-    padding: 15px 25px;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: 0.3s;
-    display: inline-block;
+#thankYouMessage {
     margin-top: 20px;
-}
-
-.forgive-button:hover {
-    background-color: rgba(200, 0, 0, 0.9);
-}
-
-/* Thank You Message (Initially Hidden) */
-.thank-you {
     font-size: 1.5rem;
-    margin-top: 20px;
+    color: #f44336;
+    display: none;
 }
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
 }
