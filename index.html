@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I'm Sorry ❤️</title>
+    <title>I'm Sorry</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    <div class="content">
         <h1>I'm Sorry ❤️</h1>
-        <p class="with-love">With love,</p>
-        <p class="name">Chittesh</p>
-
-        <button id="forgive-btn">Click if you forgive me</button>
-
-        <div id="message" class="hidden">
-            <h2>Dear Aaru,</h2>
-            <p><strong>I promise to stop being a ‘bug’</strong> in your system.</p>
+        <div class="message">
+            <p class="message-heading">Dear Aaru,</p>
+            <p><b>I promise to stop being a 'bug'</b> in your system.</p>
             <p>I’m sorry for the lag in my boyfriend skills—let’s optimize this together?</p>
-            <p class="thank-you">Thank you Madame! Sending Virtual Forehead Kisses!🤗💕</p>
         </div>
-
-        <div id="poppers-container"></div>
+        <button id="forgiveButton" onclick="showForgiveMessage()">Click if you forgive me</button>
+        <div id="forgiveMessage" class="hidden">
+            <p>Thank you Madam! Sending Virtual Forehead Kisses! 🤗💕</p>
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

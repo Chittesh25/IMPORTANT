@@ -1,40 +1,85 @@
 body {
     font-family: 'Arial', sans-serif;
-    text-align: center;
     background-color: #fefae0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
+    text-align: center;
 }
 
-.container {
-    padding: 20px;
+.content {
+    background-color: #faedcd;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
 }
 
 h1 {
+    font-size: 3rem;
     color: #d4a373;
-    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 1.2rem;
+    color: #081363;
+}
+
+.message-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 button {
-    background-color: #faedcd;
-    color: #000;
-    font-size: 1.2rem;
-    padding: 10px 21px;
+    background-color: #081363;
+    color: #fff;
     border: none;
-    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
     cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
 button:hover {
-    background-color: #e9edc9;
+    background-color: #ccd5ae;
+}
+
+#forgiveMessage {
+    display: none;
+    font-size: 1.5rem;
+    color: #faedcd;
+    margin-top: 20px;
 }
 
 .hidden {
     display: none;
 }
 
-.thank-you {
-    font-weight: bold;
-    color: #d4a373;
-    font-size: 1.2rem;
+/* Animations */
+@keyframes poppers {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: absolute;
+    animation: poppers 1s ease-out;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
 }
