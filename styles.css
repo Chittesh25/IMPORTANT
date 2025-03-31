@@ -1,85 +1,71 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fefae0;
+    background-color: #f9f3f3;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    text-align: center;
 }
 
-.content {
-    background-color: #faedcd;
+.container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     width: 80%;
     max-width: 600px;
 }
 
 h1 {
-    font-size: 3rem;
-    color: #d4a373;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #f44336;
+    text-transform: uppercase;
 }
 
-.message {
+p {
     font-size: 1.2rem;
-    color: #081363;
-}
-
-.message-heading {
-    font-size: 1.5rem;
-    font-weight: bold;
+    color: #333;
+    line-height: 1.5;
 }
 
 button {
-    background-color: #081363;
-    color: #fff;
+    background-color: #ffb6c1;
+    padding: 12px 20px;
     border: none;
-    padding: 15px 30px;
+    border-radius: 8px;
     font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
+    transition: all 0.3s;
 }
 
 button:hover {
-    background-color: #ccd5ae;
+    background-color: #ff6f61;
+    color: white;
 }
 
-#forgiveMessage {
-    display: none;
-    font-size: 1.5rem;
-    color: #faedcd;
+#thankYouMessage {
     margin-top: 20px;
+    font-size: 1.5rem;
+    color: #f44336;
+    display: none;
 }
 
 .hidden {
     display: none;
 }
 
-/* Animations */
-@keyframes poppers {
-    0% {
-        transform: scale(0.5);
-        opacity: 0;
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
     }
-    50% {
-        transform: scale(1.5);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 0;
-    }
-}
 
-.confetti {
-    position: absolute;
-    animation: poppers 1s ease-out;
-    z-index: 1000;
-    top: 50%;
-    left: 50%;
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
 }
