@@ -1,15 +1,17 @@
-document.getElementById("forgive-btn").addEventListener("click", function() {
-    let message = document.getElementById("thank-you");
-    message.classList.remove("hidden");
-    message.classList.add("pop-animation");
+// Get the elements
+const forgiveButton = document.getElementById('forgiveButton');
+const thankYouMessage = document.getElementById('thankYouMessage');
 
-    // Hide the button after clicking
-    this.style.display = 'none';
+// Add event listener to the forgive button
+forgiveButton.addEventListener('click', () => {
+    forgiveButton.style.display = 'none';  // Hide the button
+    thankYouMessage.style.display = 'block';  // Show the "Thank you" message
 
-    // Trigger confetti animation
-    animateConfetti();
+    // Pop-up or animation after clicking (could be like confetti)
+    animateConfetti();  // Call a function to animate confetti (next)
 });
 
+// Confetti animation (simplified version)
 function animateConfetti() {
     let colors = ["#ff6f61", "#f44336", "#ffb6c1", "#ffd700", "#ff6347"];
     for (let i = 0; i < 100; i++) {
@@ -29,7 +31,7 @@ function animateConfetti() {
     }
 }
 
-// Add keyframes dynamically for confetti animation
+// Keyframe for confetti fall animation
 const style = document.createElement('style');
 style.innerHTML = `
 @keyframes fall {
